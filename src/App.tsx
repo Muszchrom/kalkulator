@@ -73,9 +73,9 @@ function App() {
     }
   }, [dpobc, snt])
   return (
-    <div className="App">
-      <header className="App-header">
-        <div style={{display: "flex", gap: "16px"}}>
+    <div className="App" style={{background: "#282c34", color: "white", padding: "12px", minHeight: "100vh", display: "flex", alignItems: "center", flexDirection: "column"}}>
+      <h1>🌚🌚🌚</h1>
+      <div style={{display: "flex", gap: "16px", flexWrap: "wrap"}}>
           <form style={{display: "flex", flexDirection: "column"}}>
             <Inp state={snt} changeState={setSnt}>Moc znamionowa <i>S<sub>nT</sub></i></Inp>
             <Inp state={sz} changeState={setSz}>Moc zapotrzebowania pozorna <i>S<sub>Z</sub></i></Inp>
@@ -104,7 +104,12 @@ function App() {
             <Box><i>Δu<sub>R%</sub></i>= {durp !== undefined ? durp : "-"}</Box>
           </div>
         </div>
-      </header>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <a href="https://github.com/Muszchrom/kalkulator" target="_blank">Github</a>
     </div>
   );
 }
@@ -120,7 +125,7 @@ function Box({children}: {children: React.ReactNode}) {
 function Inp({children, state, changeState}: {children: React.ReactNode, state: number | undefined, changeState: (val: number) => void}) {
   return (
     <div style={{width: "100%", display: "flex", justifyContent: "space-between"}}>
-      <label>{children}</label>
+      <label style={{textAlign: "left"}}>{children}</label>
       <input type="number" value={state} onChange={(e) => changeState(parseFloat(e.target.value))}></input>
     </div>
   )
