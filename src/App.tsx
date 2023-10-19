@@ -109,7 +109,7 @@ function App() {
         <br/>
         <br/>
         <br/>
-        <a href="https://github.com/Muszchrom/kalkulator" target="_blank">Github</a>
+        <a href="https://github.com/Muszchrom/kalkulator" target="_blank" rel="noreferrer">Github</a>
     </div>
   );
 }
